@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-body pb-0">
+    <div class="row">
+      <div class="col-12 col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <label>Download and copy text from textarea </label>
+          </div>
+          <div class="card-body">
+            <div class="center-form">
+              <div class="row">
+                <div class="col-6 col-md-6">
+                  <div class="form-group">
+                    <h5>Type To Copy in textarea</h5>
+                    <textarea #userinput placeholder="Enter text to be copied"
+                      style="height: 167px!important;width: 500px;" [(ngModel)]="textValue"></textarea>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6">
+                  <div class="form-group">
+                    <h5>Paste</h5>
+                    <textarea placeholder="Paste copied text" style="height: 167px!important;width: 500px;"></textarea>
+                  </div>
+                </div>
+                <div class="col-12 col-md-12 text-center">
+                  <button type="button" style="margin-right:5px"  (click)="copyInputMessage(userinput)"
+                    class="btn btn-primary">Copy to
+                    Clipboard</button>
+                    <button type="button" style="margin-right:5px"  (click)="downloadText(userinput)"
+                    class="btn btn-primary">Download Text</button>
+                  <label *ngIf="msgHideAndShow" style="float: right;">{{textMessage}}</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
